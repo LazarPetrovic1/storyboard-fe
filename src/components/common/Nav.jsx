@@ -75,6 +75,14 @@ function Nav() {
                 <i className="fa-solid fa-newspaper"></i> Stories
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${pathname === "/library" && "active"}`}
+                to="/library"
+              >
+                <i className="fa-solid fa-book" /> Library
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
