@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Alert, Layout, Nav, NotFound } from "./components";
+import { CreateStory, EditStory, Home, Search, Settings } from "./pages";
+import { APP_PREFIX, INITIAL_FONT_FAMILY_VALUE } from './constants';
 
 function App() {
+  useEffect(() => {
+    const theme = localStorage.getItem(`${APP_PREFIX}_theme`);
+    const fontFamily = localStorage.getItem(`${APP_PREFIX}_fontFamily`);
+    const fontSize = localStorage.getItem(`${APP_PREFIX}_fontSize`);
+    if (!theme || theme == null) localStorage.setItem(`${APP_PREFIX}_theme`, JSON.stringify("dark"));
+    if (!fontFamily || fontFamily == null) localStorage.setItem(`${APP_PREFIX}_fontFamily`, JSON.stringify(INITIAL_FONT_FAMILY_VALUE));
+    if (!fontSize || fontSize == null) localStorage.setItem(`${APP_PREFIX}_fontSize`, "16");
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav />
+      <Alert />
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/settings" element={<Settings />} />
+          <Route exact path="/stories" element={<Search />} />
+          <Route exact path="/stories/new" element={<CreateStory />} />
+          <Route exact path="/stories/:id" element={<EditStory />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
