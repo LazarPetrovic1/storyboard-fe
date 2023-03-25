@@ -14,7 +14,7 @@ function LibraryPage() {
       <BorderSpinButtons />
       <BoxShadowButtons />
       <DropButtons />
-      <FancyButton />
+      <FancyButton>Some random text</FancyButton>
       <ThemedButtons />
     </div>
   )
