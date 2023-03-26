@@ -1,21 +1,24 @@
 import {
   BorderButtons,
-  BorderSpinButtons,
   BoxShadowButtons,
   DropButtons,
   FancyButton,
-  ThemedButtons
+  ThemedButtons,
+  ColourButton,
+  VariousButtons
 } from '../components/common/buttons';
 
 function LibraryPage() {
   return (
     <div>
       <BorderButtons />
-      <BorderSpinButtons />
       <BoxShadowButtons />
       <DropButtons />
       <FancyButton>Some random text</FancyButton>
       <ThemedButtons />
+      <h1>Colour Button</h1>
+      <ColourButton />
+      <VariousButtons />
     </div>
   )
 }
