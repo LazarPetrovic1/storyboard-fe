@@ -66,9 +66,10 @@ const move4 = keyframes`
 
 export const BtnCont = styled.div`
   text-align: center;
+  width: ${props => props.width} !important;
   & [stylerole="linkbutton"] {
     position: relative;
-    padding: 20px 70px;
+    padding: 10px 25px;
     border: 1px solid white;
     color: white;
     text-decoration: none;

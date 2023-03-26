@@ -2,6 +2,7 @@ import { useState } from "react"
 import { connect } from "react-redux";
 import { alerts, stories } from "../actions";
 import { RadioButton } from "../components"
+import { BoxShadowButton } from "../styled";
 
 function CreateStory({ createStory, setAlert }) {
   const [story, setStory] = useState(() => ({
@@ -24,7 +25,8 @@ function CreateStory({ createStory, setAlert }) {
   }
   return (
     <article className="centralize">
-      <form className="border border-1 p-5 container-sm" onSubmit={onSubmit}>
+      <form className="border border-1 px-5 py-4 container-sm" onSubmit={onSubmit}>
+        <h2 className="display-4 text-center">Create a story</h2>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Title</label>
           <input
@@ -68,10 +70,10 @@ function CreateStory({ createStory, setAlert }) {
             <RadioButton name="type" id="homicide" onChange={() => onRadioChange("homicide")} />
           </div>
         </div>
-        <div className="d-flex justify-content-end">
-          <button type="submit" className="btn btn-primary">
+        <div className="d-flex justify-content-end mb-4">
+          <BoxShadowButton className="offset">
             <i className="fa-solid fa-paper-plane" />&nbsp;&nbsp;Submit
-          </button>
+          </BoxShadowButton>
         </div>
       </form>
     </article>

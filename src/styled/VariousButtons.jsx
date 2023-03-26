@@ -5,7 +5,6 @@ const animatedbutton = css`
   &:link, &:visited {
     position: relative;
     display: block;
-    margin: 30px auto 0;
     padding: 14px 15px;
     color: #fff;
     font-size:14px;

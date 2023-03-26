@@ -1,3 +1,4 @@
+import { BoxShadowButton } from "./BoxShadowButton";
 import { BtnCont } from "./CirclingBorderButton";
 import StyledLayout from "./StyledLayout";
 import {
@@ -37,5 +38,6 @@ export {
   TharButton3,
   TharButton4,
   StyledLayout,
-  BtnCont
+  BtnCont,
+  BoxShadowButton
 }

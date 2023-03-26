@@ -14,6 +14,7 @@ const StyledLayout = styled.section`
   font-size: ${props => props.fontSize}px;
   font-family: ${props => props.fontFamily};
   z-index: 1;
+  overflow: auto;
 `;
 
 export default StyledLayout

@@ -5,6 +5,7 @@ import {
   SettingsTheme,
   SettingsChangePassword
 } from "../components";
+import { BoxShadowButton } from "../styled";
 
 function Settings() {
   const [settingsData, setSettingsData] = useState(() => ({
@@ -26,9 +27,9 @@ function Settings() {
       <SettingsChangePassword />
       {
         (diffTheme || diffFontSize || diffFontFamily) && (
-          <button onClick={saveSettings} className="btn btn-success">
+          <BoxShadowButton onClick={saveSettings} className="raise">
             <i className="fa-solid fa-floppy-disk"></i>&nbsp;&nbsp;Save changes
-          </button>
+          </BoxShadowButton>
         )
       }
     </section>

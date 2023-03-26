@@ -20,6 +20,7 @@ function LibraryPage() {
       <h1>Colour Button</h1>
       <ColourButton />
       <VariousButtons />
+      <h1>Circling Border Button</h1>
       <CirclingBorderButton /> {/* THIS IS A LINK */}
     </div>
   )

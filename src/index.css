@@ -44,3 +44,7 @@ body {
 .offset { --color: #19bc8b; --hover: #1973bc; }
 
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--hover); } }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #eee; }
+::-webkit-scrollbar-thumb { background: #737373; }

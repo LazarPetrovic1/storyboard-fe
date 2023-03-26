@@ -28,10 +28,10 @@ function VariousButtons() {
       </div>
       
       <div className="row">
-        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton1 href="#" className="btn btn-sm animated-button victoria-one">45deg</VictoriaButton1> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton2 href="#" className="btn btn-sm animated-button victoria-two">225deg</VictoriaButton2> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton3 href="#" className="btn btn-sm animated-button victoria-three">0deg</VictoriaButton3> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton4 href="#" className="btn btn-sm animated-button victoria-four">180deg</VictoriaButton4> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton1 href="#">45deg</VictoriaButton1> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton2 href="#">225deg</VictoriaButton2> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton3 href="#">0deg</VictoriaButton3> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <VictoriaButton4 href="#">180deg</VictoriaButton4> </div>
       </div>
       
       <div className="row">
@@ -41,10 +41,10 @@ function VariousButtons() {
       </div>
       
       <div className="row">
-        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton1 href="#" className="btn btn-sm animated-button sandy-one">0deg</SandyButton1> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton2 href="#" className="btn btn-sm animated-button sandy-two">180deg</SandyButton2> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton3 href="#" className="btn btn-sm animated-button sandy-three">45deg</SandyButton3> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton4 href="#" className="btn btn-sm animated-button sandy-four">225deg</SandyButton4> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton1 href="#">0deg</SandyButton1> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton2 href="#">180deg</SandyButton2> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton3 href="#">45deg</SandyButton3> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <SandyButton4 href="#">225deg</SandyButton4> </div>
       </div>
       
       <div className="row">
@@ -54,10 +54,10 @@ function VariousButtons() {
       </div>
       
       <div className="row">
-        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton1 href="#" className="btn btn-sm animated-button gibson-one">225deg</GibsonButton1> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton2 href="#" className="btn btn-sm animated-button gibson-two">45deg</GibsonButton2> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton3 href="#" className="btn btn-sm animated-button gibson-three">180deg</GibsonButton3> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton4 href="#" className="btn btn-sm animated-button gibson-four">0deg</GibsonButton4> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton1 href="#">225deg</GibsonButton1> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton2 href="#">45deg</GibsonButton2> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton3 href="#">180deg</GibsonButton3> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <GibsonButton4 href="#">0deg</GibsonButton4> </div>
       </div>
 
       <div className="row">
@@ -67,10 +67,10 @@ function VariousButtons() {
       </div>
       
       <div className="row pb-5">
-        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton1 href="#" className="btn btn-sm animated-button thar-one">Bottom to top</TharButton1> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton2 href="#" className="btn btn-sm animated-button thar-two">Top to bottom</TharButton2> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton3 href="#" className="btn btn-sm animated-button thar-three">Left to right</TharButton3> </div>
-        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton4 href="#" className="btn btn-sm animated-button thar-four">Right to left</TharButton4> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton1 href="#">Bottom to top</TharButton1> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton2 href="#">Top to bottom</TharButton2> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton3 href="#">Left to right</TharButton3> </div>
+        <div className="col-md-3 col-sm-3 col-xs-6"> <TharButton4 href="#">Right to left</TharButton4> </div>
       </div>
     </div>
   )
