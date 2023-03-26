@@ -5,6 +5,7 @@ import { FancyButton } from './FancyButton';
 import { ThemedButtons } from './ThemedButtons';
 import { ColourButton } from './ColourButton';
 import { VariousButtons } from './VariousButtons';
+import { CirclingBorderButton } from './CirclingBorderButton';
 
 export {
   BorderButtons,
@@ -13,5 +14,6 @@ export {
   FancyButton,
   ThemedButtons,
   ColourButton,
-  VariousButtons
+  VariousButtons,
+  CirclingBorderButton // This is a LINK
 }

@@ -5,7 +5,8 @@ import {
   FancyButton,
   ThemedButtons,
   ColourButton,
-  VariousButtons
+  VariousButtons,
+  CirclingBorderButton
 } from '../components/common/buttons';
 
 function LibraryPage() {
@@ -19,6 +20,7 @@ function LibraryPage() {
       <h1>Colour Button</h1>
       <ColourButton />
       <VariousButtons />
+      <CirclingBorderButton /> {/* THIS IS A LINK */}
     </div>
   )
 }

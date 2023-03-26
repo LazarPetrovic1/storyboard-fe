@@ -1,3 +1,4 @@
+import { BtnCont } from "./CirclingBorderButton";
 import StyledLayout from "./StyledLayout";
 import {
   VictoriaButton1,
@@ -18,7 +19,6 @@ import {
   TharButton4,
 } from "./VariousButtons";
 
-
 export {
   VictoriaButton1,
   VictoriaButton2,
@@ -36,5 +36,6 @@ export {
   TharButton2,
   TharButton3,
   TharButton4,
-  StyledLayout
+  StyledLayout,
+  BtnCont
 }
