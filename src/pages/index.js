@@ -4,6 +4,7 @@ import Home from "./home";
 import Library from "./library";
 import Search from "./search";
 import Settings from "./settings";
+import StoryPage from "./story";
 
 export {
   CreateStory,
@@ -11,5 +12,6 @@ export {
   Home,
   Settings,
   Search,
-  Library
+  Library,
+  StoryPage
 }

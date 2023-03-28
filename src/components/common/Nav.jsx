@@ -23,13 +23,9 @@ const NavWrapper = styled.nav`
 
 function Nav() {
   const [theme] = useTheme();
-  console.log("GET VAL", NAV_SELECTED_THEME[theme]);
   const { pathname } = useLocation()
   return (
-    <NavWrapper
-      theme={theme}
-      className="navbar navbar-expand-lg"
-    >
+    <NavWrapper theme={theme} className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <Link className="navbar-brand d-flex justify-content-between align-items-center" to="/">
           <i className="fa-solid fa-book" /> <span className="d-inline-block mx-2">Storyboard</span>

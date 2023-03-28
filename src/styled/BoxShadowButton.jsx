@@ -24,7 +24,7 @@ export const BoxShadowButton = styled.button`
     &:hover, &:focus { box-shadow: inset 0 0 0 2em var(--hover); }
   }
   &.pulse {
-    &:hover, &:focus { animation: pulse 1s; box-shadow: 0 0 0 2em transparent; }
+    &:hover, &:focus { animation: pulse 1s infinite; box-shadow: 0 0 0 2em transparent; }
   }
   &.close {
     &:hover, &:focus { box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover); }
@@ -78,7 +78,7 @@ export const BoxShadowLink = styled(Link)`
     &:hover, &:focus { box-shadow: inset 0 0 0 2em var(--hover); }
   }
   &.pulse {
-    &:hover, &:focus { animation: pulse 1s; box-shadow: 0 0 0 2em transparent; }
+    &:hover, &:focus { animation: pulse 1s infinite; box-shadow: 0 0 0 2em transparent; }
   }
   &.close {
     &:hover, &:focus { box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover); }

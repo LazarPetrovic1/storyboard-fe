@@ -18,10 +18,10 @@ function LibraryPage() {
       <FancyButton>Some random text</FancyButton>
       <ThemedButtons />
       <h1>Colour Button</h1>
-      <ColourButton />
+      <ColourButton>Draw Border</ColourButton>
       <VariousButtons />
       <h1>Circling Border Button</h1>
-      <CirclingBorderButton /> {/* THIS IS A LINK */}
+      <CirclingBorderButton>Circling border button</CirclingBorderButton> {/* THIS IS A LINK */}
     </div>
   )
 }

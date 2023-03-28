@@ -13,8 +13,9 @@ const SearchInput = styled.input.attrs(() => ({
   color: ${props => `${THEME_TEXT[props.theme]}`} !important;
   outline: 0;
   border: 0;
-  border-bottom: 1px solid ${props => `${THEME_TEXT[props.theme]}`};
+  border-bottom: 3px solid ${props => `${THEME_TEXT[props.theme]}`};
   font-size: 1.25rem;
+  padding: 0.25rem;
 `;
 
 function Search({ stories }) {
@@ -34,7 +35,7 @@ function Search({ stories }) {
       </div>
       <section className="border border-2 rounded py-2 px-3 d-flex gap-2" style={{ flexWrap: "wrap" }}>
         {storiesToShow.length > 0 ? storiesToShow.map((story, index) => (
-          <StoryCard story={story} index={index} />
+          <StoryCard story={story} key={index} index={index} />
         )) : <h2>No stories to show</h2>}
       </section>
     </section>

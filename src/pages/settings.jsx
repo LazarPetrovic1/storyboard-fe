@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { storyTypes } from "../actions/types";
 import {
@@ -18,6 +18,7 @@ function Settings() {
   const dispatch = useDispatch()
   const storyLen = useSelector(state => state?.stories?.stories?.length);
   const { diffTheme, diffFontSize, diffFontFamily } = settingsData;
+  const isSeeded = useMemo(() => storyLen >= 250, [storyLen])
   const saveSettings = () => {
     const isWindow = typeof window === 'object';
     if (isWindow) window.location.reload(false);
@@ -38,10 +39,10 @@ function Settings() {
       }
       <div className="d-flex justify-content-between align-items-center my-2 border-bottom border-1 pb-2">
         <span>DBSeed</span>
-        <span className={storyLen > 50 ? "text-success" : "text-danger"}>
-          {storyLen > 50 ? "Seeded" : "Not seeded"}
+        <span className={isSeeded ? "text-success" : "text-danger"}>
+          {isSeeded ? "Seeded" : "Not seeded"}
         </span>
-        <ThemedButton onClick={() => dispatch({ type: storyTypes.SEED_STORIES })} padding="0.5rem 1.5rem" className="blue">SEED</ThemedButton>
+        <ThemedButton disabled={isSeeded} onClick={() => !isSeeded ? dispatch({ type: storyTypes.SEED_STORIES }) : null} padding="0.5rem 1.5rem" className="blue">SEED</ThemedButton>
       </div>
     </section>
   )

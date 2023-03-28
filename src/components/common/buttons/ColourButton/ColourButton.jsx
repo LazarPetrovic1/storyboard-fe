@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
-const BorderButton = styled.button`
+const ClrBtn = styled.button`
   box-shadow: inset 0 0 0 4px #58afd1;
   color: #58afd1;
   transition: color 0.25s 0.0833333333s;
   position: relative;
   background: none;
+  z-index: 200;
   border: none;
   cursor: pointer;
   line-height: 1.5;
   font: 700 1.2rem 'Roboto Slab', sans-serif;
-  padding: 1em 2em;
+  padding: ${props => props.padding ? props.padding : "1em 2em"};
   letter-spacing: 0.05rem;
   &:focus { outline: 2px dotted #55d7dc; }
   &::before, &::after {
     border: 0 solid transparent;
     box-sizing: border-box;
     content: '';
-    pointer-events: none;
+    pointer-events: all;
     position: absolute;
     width: 0;
     height: 0;
@@ -45,8 +46,8 @@ const BorderButton = styled.button`
   }
 `;
 
-function ColourButton() {
-  return <BorderButton>Draw Border</BorderButton>
+function ColourButton({ children, padding }) {
+  return <ClrBtn padding={padding}>{ children }</ClrBtn>
 }
 
 export default ColourButton;

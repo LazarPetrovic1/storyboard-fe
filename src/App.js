@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Alert, Layout, Nav, NotFound } from "./components";
-import { CreateStory, EditStory, Home, Search, Settings, Library } from "./pages";
+import { CreateStory, EditStory, Home, Search, Settings, Library, StoryPage } from "./pages";
 import { APP_PREFIX, INITIAL_FONT_FAMILY_VALUE } from './constants';
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
           <Route exact path="/settings" element={<Settings />} />
           <Route exact path="/stories" element={<Search />} />
           <Route exact path="/stories/new" element={<CreateStory />} />
+          <Route exact path="/stories/:id" element={<StoryPage />} />
           <Route exact path="/stories/:id/edit" element={<EditStory />} />
-          <Route exact path="/stories/:id" element={<EditStory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
