@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/settings" element={<Settings />} />
           <Route exact path="/stories" element={<Search />} />
           <Route exact path="/stories/new" element={<CreateStory />} />
+          <Route exact path="/stories/:id/edit" element={<EditStory />} />
           <Route exact path="/stories/:id" element={<EditStory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

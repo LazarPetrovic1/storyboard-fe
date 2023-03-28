@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { connect } from "react-redux";
 import { alerts, stories } from "../actions";
-import { RadioButton } from "../components"
+import { MarkdownEditor, RadioButton } from "../components"
 import { BoxShadowButton } from "../styled";
 
 function CreateStory({ createStory, setAlert }) {
@@ -23,6 +23,8 @@ function CreateStory({ createStory, setAlert }) {
       setAlert("All fields are required", "danger");
     }
   }
+  // eslint-disable-next-line
+  const onFullStoryChange = useCallback((e) => setStory((prevStory) => ({ ...prevStory, fullStory: e })), []);
   return (
     <article className="centralize">
       <form className="border border-1 px-5 py-4 container-sm" onSubmit={onSubmit}>
@@ -49,17 +51,13 @@ function CreateStory({ createStory, setAlert }) {
           />
           <small id="snippetHelper">This part is read to the players by the narrator.</small>
         </div>
-        <div className="mb-3 form-floating">
-          <textarea
-            className="form-control"
+        <div className="mb-3">
+          <label htmlFor="fullStory">Full story</label>
+          <MarkdownEditor
             placeholder="Enter the entire story here."
-            id="fullStory"
-            name="fullStory"
-            style={{ minHeight: "150px" }}
             value={story.fullStory}
-            onChange={onChange}
-          ></textarea>
-          <label htmlFor="fullStory" style={{ color: "#111" }}>Full story</label>
+            onChange={onFullStoryChange}
+          />
           <small id="fullStoryHelper">This part is only known to the narrator.</small>
         </div>
         <div >

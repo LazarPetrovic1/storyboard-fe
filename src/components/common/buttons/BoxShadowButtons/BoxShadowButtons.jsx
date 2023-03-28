@@ -1,4 +1,4 @@
-import { BoxShadowButton } from "../../../../styled"
+import { BoxShadowButton, BoxShadowLink } from "../../../../styled"
 
 function BoxShadowButtons() {
   return (
@@ -11,6 +11,15 @@ function BoxShadowButtons() {
       <BoxShadowButton className="up">Fill Up</BoxShadowButton>
       <BoxShadowButton className="slide">Slide</BoxShadowButton>
       <BoxShadowButton className="offset">Offset</BoxShadowButton>
+      <div className="my-4">
+        <BoxShadowLink to="/" className="fill">Fill In</BoxShadowLink>
+        <BoxShadowLink to="/" className="pulse">Pulse</BoxShadowLink>
+        <BoxShadowLink to="/" className="close">Close</BoxShadowLink>
+        <BoxShadowLink to="/" className="raise">Raise</BoxShadowLink>
+        <BoxShadowLink to="/" className="up">Fill Up</BoxShadowLink>
+        <BoxShadowLink to="/" className="slide">Slide</BoxShadowLink>
+        <BoxShadowLink to="/" className="offset">Offset</BoxShadowLink>
+      </div>
     </div>
   )
 }

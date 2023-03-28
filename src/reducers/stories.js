@@ -1,4 +1,5 @@
 import { storyTypes } from "../actions/types";
+import mockStories from '../seedData/mockarooData.json';
 
 const initialState = {
   stories: [],
@@ -26,6 +27,12 @@ const storiesReducer = (state = initialState, { type, payload }) => {
         ...state,
         stories: [payload, ...state.stories],
         story: payload,
+        isLoading: false
+      }
+    case storyTypes.SEED_STORIES:
+      return {
+        ...state,
+        stories: [...mockStories, ...state.stories],
         isLoading: false
       }
     case storyTypes.UPDATE_STORY:

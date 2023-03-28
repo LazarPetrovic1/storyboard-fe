@@ -4,3 +4,4 @@ export const GET_STORIES = "GET_STORIES";
 export const UPDATE_STORY = "UPDATE_STORY";
 export const DELETE_STORY = "DELETE_STORY";
 export const STORY_ERROR = "STORY_ERROR";
+export const SEED_STORIES = "SEED_STORIES";

@@ -33,6 +33,7 @@ body {
   bottom: 1rem;
   right: 1rem;
   z-index: 2;
+  /* color: #5955b9; */
 }
 
 .fill { --color: #a972cb; --hover: #cb72aa; }

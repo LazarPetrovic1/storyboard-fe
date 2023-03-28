@@ -2,16 +2,19 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { THEMES_BG, THEME_TEXT, NAV_SELECTED_THEME } from "../../constants";
 import { useTheme } from "../../hooks";
+import { BorderLink3 } from "../../styled";
 
+
+// & ul > li > a {
+//   color: ${props => THEME_TEXT[props.theme]};
+//   &:hover {
+//     color: ${props => NAV_SELECTED_THEME[props.theme]} !important;
+//   }
+// }
 const NavWrapper = styled.nav`
+  max-height: 56px;
   background: ${props => THEMES_BG[props.theme]};
   color: ${props => THEME_TEXT[props.theme]};
-  & ul > li > a {
-    color: ${props => THEME_TEXT[props.theme]};
-    &:hover {
-      color: ${props => NAV_SELECTED_THEME[props.theme]} !important;
-    }
-  }
   .active,
   .navbar-brand {
     color: ${props => NAV_SELECTED_THEME[props.theme]} !important;
@@ -28,7 +31,10 @@ function Nav() {
       className="navbar navbar-expand-lg"
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Logo here</Link>
+        <Link className="navbar-brand d-flex justify-content-between align-items-center" to="/">
+          <i className="fa-solid fa-book" /> <span className="d-inline-block mx-2">Storyboard</span>
+          <i className="fa-solid fa-book" /> 
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -43,45 +49,50 @@ function Nav() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                className={`nav-link ${pathname === "/" && "active"}`}
+              <BorderLink3
+                className={`p-2 my-0 mx-1`}
                 aria-current="page"
                 to="/"
+                active={pathname === "/"}
               >
                 <i className="fa-solid fa-home" /> Home
-              </Link>
+              </BorderLink3>
             </li>
             <li className="nav-item">
-              <Link
-                className={`nav-link ${pathname === "/stories/new" && "active"}`}
+              <BorderLink3
+                className={`p-2 my-0 mx-1`}
                 to="/stories/new"
+                active={pathname === "/stories/new"}
               >
                 <i className="fa-solid fa-circle-plus" /> New story
-              </Link>
+              </BorderLink3>
             </li>
             <li className="nav-item">
-              <Link
-                className={`nav-link ${pathname === "/settings" && "active"}`}
+              <BorderLink3
+                active={pathname === "/settings"}
+                className={`p-2 my-0 mx-1`}
                 to="/settings"
               >
                 <i className="fa-solid fa-gear" /> Settings
-              </Link>
+              </BorderLink3>
             </li>
             <li className="nav-item">
-              <Link
-                className={`nav-link ${pathname === "/stories" && "active"}`}
+              <BorderLink3
+                active={pathname === "/stories"}
+                className={`p-2 my-0 mx-1`}
                 to="/stories"
               >
                 <i className="fa-solid fa-newspaper"></i> Stories
-              </Link>
+              </BorderLink3>
             </li>
             <li className="nav-item">
-              <Link
-                className={`nav-link ${pathname === "/library" && "active"}`}
+              <BorderLink3
+                className={`p-2 my-0 mx-1`}
                 to="/library"
+                active={pathname === "/library"}
               >
                 <i className="fa-solid fa-book" /> Library
-              </Link>
+              </BorderLink3>
             </li>
           </ul>
         </div>
