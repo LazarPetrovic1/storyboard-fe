@@ -1,9 +1,10 @@
-import { useState } from "react";
-import { connect } from "react-redux"
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import { StoryCard } from "../components";
 import { THEME_TEXT, THEMES_BG } from '../constants';
-import { useTheme } from "../hooks";
+import { useInfiniteScroll, useSize, useTheme } from "../hooks";
+import { ScrollContainer } from "../styled";
+import { useEffect } from "react";
 
 const SearchInput = styled.input.attrs(() => ({
   type: "search",
@@ -18,32 +19,42 @@ const SearchInput = styled.input.attrs(() => ({
   padding: 0.25rem;
 `;
 
-function Search({ stories }) {
+const Header = styled.div.attrs(() => ({
+  className: "d-flex justify-content-between align-items-center"
+}))``;
+
+function Search() {
+  const scrollContainerRef = useRef(null);
+  const headerRef = useRef(null);
+  const headerSize = useSize(headerRef);
   const [theme] = useTheme();
-  const [storiesToShow, setStoriesToShow] = useState(() => stories);
+  const [data, setData] = useState(() => []);
+  const [controlledData, setControlledData] = useState(() => []);
+  const { page, isLoading, dataToSend } = useInfiniteScroll(scrollContainerRef);
+  useEffect(() => {
+    setData((prevData) => [...prevData, ...dataToSend]);
+    setControlledData((prevData) => [...prevData, ...dataToSend]);
+    // eslint-disable-next-line
+  }, [page]);
   const searchStories = e => {
-    if (e.target.value <= 2) setStoriesToShow(() => stories);
-    else setStoriesToShow((prevStories) => 
+    if (e.target.value <= 2) setControlledData(() => data);
+    else setControlledData((prevStories) => 
       prevStories.filter(story => story.title.toLowerCase().includes(e.target.value.toLowerCase()))
     )
   }
-  return (
+  return isLoading ? <h1>Loading...</h1> :(
     <section className="container container-sm">
-      <div className="d-flex justify-content-between align-items-center">
+      <Header ref={headerRef}>
         <h1>Search</h1>
         <SearchInput theme={theme} onChange={(e) => searchStories(e)} />
-      </div>
-      <section className="border border-2 rounded py-2 px-3 d-flex gap-2" style={{ flexWrap: "wrap" }}>
-        {storiesToShow.length > 0 ? storiesToShow.map((story, index) => (
+      </Header>
+      <ScrollContainer ref={scrollContainerRef} hs={headerSize.fullheight} className="border border-2 rounded py-2 px-3 d-flex gap-2">
+        {controlledData.length > 0 ? controlledData.map((story, index) => (
           <StoryCard story={story} key={index} index={index} />
         )) : <h2>No stories to show</h2>}
-      </section>
+      </ScrollContainer>
     </section>
   )
 }
 
-const mapStateToProps = (state) => ({
-  stories: state.stories.stories
-});
-
-export default connect(mapStateToProps, null)(Search)
+export default Search;

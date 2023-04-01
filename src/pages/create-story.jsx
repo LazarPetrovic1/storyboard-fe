@@ -1,10 +1,12 @@
 import { useCallback, useState } from "react"
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { alerts, stories } from "../actions";
 import { MarkdownEditor, RadioButton } from "../components"
 import { BoxShadowButton } from "../styled";
 
 function CreateStory({ createStory, setAlert }) {
+  const navigate = useNavigate();
   const [story, setStory] = useState(() => ({
     title: "",
     snippet: "",
@@ -16,9 +18,10 @@ function CreateStory({ createStory, setAlert }) {
   const onSubmit = async e => {
     e.preventDefault();
     if (story.title && story.snippet && story.fullStory && story.type) {
-      await createStory(story);
+      await createStory({ ...story, userId: 1 });
       setStory(() => ({ title: "", snippet: "", fullStory: "", type: "" }));
       setAlert("Story added successfully", "success");
+      navigate('/stories');
     } else {
       setAlert("All fields are required", "danger");
     }

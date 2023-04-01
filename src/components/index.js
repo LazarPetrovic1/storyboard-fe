@@ -4,6 +4,8 @@ import MarkdownEditor from "./common/MarkdownEditor";
 import Nav from "./common/Nav";
 import NotFound from "./common/NotFound";
 import RadioButton from "./common/RadioButton";
+import DBPurge from "./common/settings/DBPurge";
+import DBSeed from "./common/settings/DBSeed";
 import SettingsChangePassword from "./common/settings/SettingsChangePassword";
 import SettingsFontFamily from "./common/settings/SettingsFontFamily";
 import SettingsFontSize from "./common/settings/SettingsFontSize";
@@ -21,5 +23,7 @@ export {
   NotFound,
   Alert,
   MarkdownEditor,
-  StoryCard
+  StoryCard,
+  DBPurge,
+  DBSeed
 };

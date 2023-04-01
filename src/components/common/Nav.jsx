@@ -49,7 +49,7 @@ function Nav() {
                 className={`p-2 my-0 mx-1`}
                 aria-current="page"
                 to="/"
-                active={pathname === "/"}
+                active={pathname === "/" ? 1 : 0}
               >
                 <i className="fa-solid fa-home" /> Home
               </BorderLink3>
@@ -58,14 +58,14 @@ function Nav() {
               <BorderLink3
                 className={`p-2 my-0 mx-1`}
                 to="/stories/new"
-                active={pathname === "/stories/new"}
+                active={pathname === "/stories/new" ? 1 : 0}
               >
                 <i className="fa-solid fa-circle-plus" /> New story
               </BorderLink3>
             </li>
             <li className="nav-item">
               <BorderLink3
-                active={pathname === "/settings"}
+                active={pathname === "/settings" ? 1 : 0}
                 className={`p-2 my-0 mx-1`}
                 to="/settings"
               >
@@ -74,7 +74,7 @@ function Nav() {
             </li>
             <li className="nav-item">
               <BorderLink3
-                active={pathname === "/stories"}
+                active={pathname === "/stories" ? 1 : 0}
                 className={`p-2 my-0 mx-1`}
                 to="/stories"
               >
@@ -85,7 +85,7 @@ function Nav() {
               <BorderLink3
                 className={`p-2 my-0 mx-1`}
                 to="/library"
-                active={pathname === "/library"}
+                active={pathname === "/library" ? 1 : 0}
               >
                 <i className="fa-solid fa-book" /> Library
               </BorderLink3>

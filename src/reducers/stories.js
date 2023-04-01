@@ -38,7 +38,14 @@ const storiesReducer = (state = initialState, { type, payload }) => {
     case storyTypes.UPDATE_STORY:
       return {
         ...state,
-        stories: state.stories.map(story => story.id === payload.id ? story : payload.story),
+        stories: state.stories.map(story => parseInt(story.id) !== parseInt(payload.id) ? story : payload.story),
+        story: payload.story,
+        isLoading: false
+      }
+    case storyTypes.UPDATE_STORY_FE:
+      return {
+        ...state,
+        stories: state.stories.map((story, i) => i.toString() !== payload.id.toString() ? story : payload.story),
         story: payload.story,
         isLoading: false
       }
@@ -49,6 +56,21 @@ const storiesReducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         stories: state.stories.filter(story => story.id !== payload)
       }
+    case storyTypes.PURGE_STORIES:
+      return {
+        ...state,
+        stories: [],
+        story: null,
+        isLoading: false
+      }
+    case storyTypes.REMOVE_FE_STORY: {
+      const newStories = state.stories.filter((_, i) => i.toString() !== payload.toString());
+      return {
+        ...state,
+        stories: newStories,
+        isLoading: false
+      }
+    }
     case storyTypes.STORY_ERROR:
       return {
         ...state,

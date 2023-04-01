@@ -7,6 +7,8 @@ import useHover from './generic/useHover';
 import { useLocalStorage, useSessionStorage } from './generic/useLocalStorage';
 import { useTheme, useFontFamily, useFontSize } from './generic/useSettings';
 import useUserData from './generic/useUserData';
+import useInfiniteScroll from './models/useInfiniteScroll';
+import useSize from './generic/useSize';
 
 export {
   useEventListener,
@@ -20,5 +22,7 @@ export {
   useTheme,
   useFontFamily,
   useFontSize,
-  useUserData
+  useUserData,
+  useInfiniteScroll,
+  useSize
 }

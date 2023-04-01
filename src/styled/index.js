@@ -31,6 +31,13 @@ import {
   BorderLink4,
 } from './BorderButtons';
 import { ThemedButton } from "./ThemedButton";
+import styled from "styled-components";
+
+export const ScrollContainer = styled.article`
+  height: calc(100vh - 49px - ${props => props.hs ? props.hs : 0}px - 1rem);
+  overflow: auto;
+  flex-wrap: wrap;
+`;
 
 export {
   VictoriaButton1,
