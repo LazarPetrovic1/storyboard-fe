@@ -6,7 +6,9 @@ import {
   ThemedButtons,
   ColourButton,
   VariousButtons,
-  CirclingBorderButton
+  CirclingBorderButton,
+  CirclingBorderLink,
+  GradientButtons
 } from '../components/common/buttons';
 
 function LibraryPage() {
@@ -21,7 +23,10 @@ function LibraryPage() {
       <ColourButton>Draw Border</ColourButton>
       <VariousButtons />
       <h1>Circling Border Button</h1>
-      <CirclingBorderButton>Circling border button</CirclingBorderButton> {/* THIS IS A LINK */}
+      <CirclingBorderButton>Circling border link</CirclingBorderButton> {/* THIS IS A LINK */}
+      <h1>Circling Border Link</h1>
+      <CirclingBorderLink>Circling border button</CirclingBorderLink> {/* THIS IS A LINK */}
+      <GradientButtons />
     </div>
   )
 }

@@ -32,6 +32,21 @@ import {
 } from './BorderButtons';
 import { ThemedButton } from "./ThemedButton";
 import styled from "styled-components";
+import { DarkLink } from "./CirclingBorderLink";
+import {
+  Colour1,
+  Colour2,
+  Colour3,
+  Colour4,
+  Colour5,
+  Colour6,
+  Colour7,
+  Colour8,
+  Colour9,
+  Colour10,
+  Colour11,
+  GridBtnsContainer
+} from './GradientButtons';
 
 export const ScrollContainer = styled.article`
   height: calc(100vh - 49px - ${props => props.hs ? props.hs : 0}px - 1rem);
@@ -70,5 +85,18 @@ export {
   BorderLink2,
   BorderLink3,
   BorderLink4,
-  ThemedButton
+  ThemedButton,
+  DarkLink,
+  Colour1,
+  Colour2,
+  Colour3,
+  Colour4,
+  Colour5,
+  Colour6,
+  Colour7,
+  Colour8,
+  Colour9,
+  Colour10,
+  Colour11,
+  GridBtnsContainer
 }

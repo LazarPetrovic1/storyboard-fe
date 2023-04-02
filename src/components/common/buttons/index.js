@@ -6,6 +6,8 @@ import { ThemedButtons } from './ThemedButtons';
 import { ColourButton } from './ColourButton';
 import { VariousButtons } from './VariousButtons';
 import { CirclingBorderButton } from './CirclingBorderButton';
+import { CirclingBorderLink } from './CirclingBorderLink';
+import { GradientButtons } from './GradientButtons';
 
 export {
   BorderButtons,
@@ -15,5 +17,7 @@ export {
   ThemedButtons,
   ColourButton,
   VariousButtons,
-  CirclingBorderButton // This is a LINK
+  CirclingBorderButton, // This is a LINK
+  CirclingBorderLink, // And this is a button... what's up with that?
+  GradientButtons
 }

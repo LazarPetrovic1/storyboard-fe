@@ -54,3 +54,7 @@ export const NAV_SELECTED_THEME = {
   dark: "#fff",
   gradientDark: "#fff"
 }
+
+export const HOMICIDE = "homicide";
+export const ACCIDENT = "accident";
+export const SUICIDE = "suicide";
